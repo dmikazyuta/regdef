@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <AbsoluteLayout
+        android:id="@+id/AbsoluteLayoutCameraTools"
+        android:layout_width="125dp"
+        android:layout_height="223dp"
+        android:layout_x="1156dp"
+        android:layout_y="0dp"
+        android:background="@drawable/customshape1" >
+
+        <TextView
+            android:id="@+id/TextViewFromFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="69dp"
+            android:layout_y="44dp"
+            android:text="@string/FromFive"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/TextViewPhotoNum"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_x="27dp"
+            android:layout_y="13dp"
+            android:text="@string/NumPhoto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/DeepBlue"
+            android:textSize="60dp" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonGallery"
+            android:layout_width="94dp"
+            android:layout_height="82dp"
+            android:layout_x="17dp"
+            android:layout_y="116dp"
+            android:background="@drawable/imagebutton_photo" />
+		
+    </AbsoluteLayout>
+
+    <ImageButton
+        android:id="@+id/ImageButtonCloseCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="320dp"
+        android:background="@drawable/imagebutton_camera_close" />
+
+    <ImageButton
+        android:id="@+id/ImageButtonShot"
+        android:layout_width="131dp"
+        android:layout_height="121dp"
+        android:layout_x="1149dp"
+        android:layout_y="306dp"
+        android:background="@drawable/imagebutton_camera_shot" />
+
+    <AbsoluteLayout
+        android:id="@+id/AbsoluteLayoutFlashlight"
+        android:layout_width="78dp"
+        android:layout_height="76dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@drawable/customshape1" >
+
+        <ImageButton
+            android:id="@+id/ImageButtonFlashlight"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_x="8dp"
+            android:layout_y="5dp"
+            android:background="@drawable/imagebutton_flashlight" />
+
+    </AbsoluteLayout>
+
+</AbsoluteLayout>

@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:divider="@drawable/divider" />
+
+    <FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="62px" >
+
+        <AbsoluteLayout
+            android:id="@+id/tabPage2"
+            android:layout_width="match_parent"
+            android:layout_height="654dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.72"
+            android:background="@color/gray" >
+
+            <AbsoluteLayout
+                android:id="@+id/AbsLayoutOptions"
+                android:layout_width="1406dp"
+                android:layout_height="625dp"
+                android:layout_x="17dp"
+                android:layout_y="16dp"
+                android:background="@drawable/customshape1" >
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutOptions"
+                    android:layout_width="830dp"
+                    android:layout_height="543dp"
+                    android:layout_x="500dp"
+                    android:layout_y="46dp" >
+
+                    <AbsoluteLayout
+                        android:id="@+id/AbsLayoutOption2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/customshape1_stroke" >
+
+                        <Button
+                            android:id="@+id/SaveOptionButton2"
+                            android:layout_width="168dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="46.53"
+                            android:layout_x="604dp"
+                            android:layout_y="152dp"
+                            android:text="@string/SaveButton"
+                            android:textSize="22dp" />
+
+                        <EditText
+                            android:id="@+id/EditTextOptionServer"
+                            android:layout_width="288dp"
+                            android:layout_height="wrap_content"
+                            android:layout_x="29dp"
+                            android:layout_y="51dp" />
+
+                        <EditText
+                            android:id="@+id/EditTextOptionUsername"
+                            android:layout_width="182dp"
+                            android:layout_height="wrap_content"
+                            android:layout_x="363dp"
+                            android:layout_y="51dp" />
+
+                        <TextView
+                            android:id="@+id/TextViewOptionUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="433dp"
+                            android:layout_y="18dp"
+                            android:text="@string/OptionsUDPServerLogin"
+                            android:textSize="18dp" />
+
+                        <EditText
+                            android:id="@+id/EditTextOptionPassword"
+                            android:layout_width="218dp"
+                            android:layout_height="wrap_content"
+                            android:layout_x="576dp"
+                            android:layout_y="51dp"
+                            android:inputType="textPassword" />
+
+                        <TextView
+                            android:id="@+id/TextViewOptionPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="653dp"
+                            android:layout_y="19dp"
+                            android:text="@string/OptionsUDPServerPassword"
+                            android:textSize="18dp" />
+
+                        <Button
+                            android:id="@+id/TestOptionButton1"
+                            android:layout_width="168dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="46.53"
+                            android:layout_x="392dp"
+                            android:layout_y="152dp"
+                            android:text="@string/TestButton"
+                            android:textSize="22dp" />
+
+                        <TextView
+                            android:id="@+id/TextViewOptionServer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="148dp"
+                            android:layout_y="18dp"
+                            android:text="@string/OptionsUDPServer"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/TextViewTestOptionResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="26dp"
+                            android:layout_y="152dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/Green"
+                            android:textSize="20dp" />
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout03"
+                            android:layout_width="775dp"
+                            android:layout_height="2dp"
+                            android:layout_x="28dp"
+                            android:layout_y="250dp"
+                            android:background="@color/SeparatorGrey"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/CheckNewVersionButton"
+                            android:layout_width="224dp"
+                            android:layout_height="109dp"
+                            android:layout_weight="46.53"
+                            android:layout_x="520dp"
+                            android:layout_y="345dp"
+                            android:text="@string/VersionButton"
+                            android:textSize="22dp" />
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutVersionMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="72dp"
+                            android:layout_y="281dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/TextViewVersion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/VersionMain"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/DarkGray"
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/TextViewVersionValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/ReportValue"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/DeepBlue"
+                                android:textSize="24dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutVersionDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="68dp"
+                            android:layout_y="400dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/TextViewVersionDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/VersionDate"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/DarkGray"
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/TextViewVersionDateValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/ReportValue"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/DeepBlue"
+                                android:textSize="24dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/TextViewVesionTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="488dp"
+                            android:layout_y="309dp"
+                            android:text="@string/VersionTip"
+                            android:textSize="18dp" />
+                    </AbsoluteLayout>
+
+                    <AbsoluteLayout
+                        android:id="@+id/AbsLayoutOption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:background="@drawable/customshape1_stroke" >
+
+                        <Spinner
+                            android:id="@+id/SpinOptionSector"
+                            android:layout_width="296dp"
+                            android:layout_height="80dp"
+                            android:layout_x="458dp"
+                            android:layout_y="64dp" />
+
+                        <Button
+                            android:id="@+id/UpdateZehSectorButton"
+                            android:layout_width="224dp"
+                            android:layout_height="109dp"
+                            android:layout_weight="46.53"
+                            android:layout_x="133dp"
+                            android:layout_y="325dp"
+                            android:text="@string/UpdateButton"
+                            android:textSize="26sp" />
+
+                        <Spinner
+                            android:id="@+id/SpinOptionZeh"
+                            android:layout_width="296dp"
+                            android:layout_height="80dp"
+                            android:layout_x="92dp"
+                            android:layout_y="64dp"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/TextViewOptionZeh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="226dp"
+                            android:layout_y="23dp"
+                            android:text="@string/RegZeh"
+                            android:textSize="24sp" />
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout02"
+                            android:layout_width="2dp"
+                            android:layout_height="320dp"
+                            android:layout_x="426dp"
+                            android:layout_y="179dp"
+                            android:background="@color/SeparatorGrey"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/UpdateButton1"
+                            android:layout_width="188dp"
+                            android:layout_height="66dp"
+                            android:layout_weight="46.53"
+                            android:layout_x="530dp"
+                            android:layout_y="296dp"
+                            android:text="@string/ChangeButton"
+                            android:textSize="26sp" />
+
+                        <Button
+                            android:id="@+id/SaveOptionButton1"
+                            android:layout_width="187dp"
+                            android:layout_height="67dp"
+                            android:layout_weight="46.53"
+                            android:layout_x="530dp"
+                            android:layout_y="399dp"
+                            android:text="@string/SaveButton"
+                            android:textSize="26sp" />
+
+                        <TextView
+                            android:id="@+id/TextViewChangeZehSector"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:layout_x="495dp"
+                            android:layout_y="198dp"
+                            android:text="@string/YouMayChange"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/TextViewUpdateZehSector"
+                            android:layout_width="308dp"
+                            android:layout_height="wrap_content"
+                            android:layout_x="93dp"
+                            android:layout_y="223dp"
+                            android:text="@string/YouMayUpdate"
+                            android:textSize="24dp" />
+
+                        <TextView
+                            android:id="@+id/TextViewOptionSector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="554dp"
+                            android:layout_y="22dp"
+                            android:text="@string/RegSect"
+                            android:textSize="24sp" />
+
+                    </AbsoluteLayout>
+                </FrameLayout>
+
+                <ListView
+                    android:id="@+id/ListViewOptions"
+                    android:layout_width="357dp"
+                    android:layout_height="254dp"
+                    android:layout_x="67dp"
+                    android:layout_y="92dp"
+                    android:background="@color/listViewGrey"
+                    android:gravity="center_horizontal" >
+                </ListView>
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="185dp"
+                    android:layout_y="39dp"
+                    android:text="Категории"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="24dp" />
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+
+        <AbsoluteLayout
+            android:id="@+id/tabPage3"
+            android:layout_width="match_parent"
+            android:layout_height="654dp"
+            android:layout_gravity="bottom"
+            android:background="@color/gray" >
+
+            <AbsoluteLayout
+                android:id="@+id/AbsoluteLayout01"
+                android:layout_width="1416dp"
+                android:layout_height="546dp"
+                android:layout_x="10dp"
+                android:layout_y="16dp"
+                android:background="@drawable/customshape1" >
+
+                <ListView
+                    android:id="@+id/listViewMenu"
+                    android:layout_width="290dp"
+                    android:layout_height="195dp"
+                    android:layout_x="37dp"
+                    android:layout_y="92dp"
+                    android:background="@color/listViewGrey"
+                    android:gravity="center_horizontal" >
+                </ListView>
+
+                <ListView
+                    android:id="@+id/ListViewJour"
+                    android:layout_width="1010dp"
+                    android:layout_height="422dp"
+                    android:layout_x="371dp"
+                    android:layout_y="90dp"
+                    android:background="@color/white" >
+                </ListView>
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="139dp"
+                    android:layout_y="38dp"
+                    android:text="@string/JournalName"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/TextViewJourData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="820dp"
+                    android:layout_y="38dp"
+                    android:text="@string/JournalData"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="24dp" />
+
+                <Button
+                    android:id="@+id/DeleteDefButton"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="46.53"
+                    android:layout_x="1250dp"
+                    android:layout_y="29dp"
+                    android:text="@string/DeleteJourButton"
+                    android:textColor="@color/DeepBlue"
+                    android:textSize="18dp" />
+            </AbsoluteLayout>
+
+            <Button
+                android:id="@+id/SaveButton2"
+                android:layout_width="308dp"
+                android:layout_height="73dp"
+                android:layout_weight="46.53"
+                android:layout_x="74dp"
+                android:layout_y="576dp"
+                android:text="@string/SaveButton"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/SyncButton2"
+                android:layout_width="308dp"
+                android:layout_height="73dp"
+                android:layout_weight="46.53"
+                android:layout_x="565dp"
+                android:layout_y="576dp"
+                android:text="@string/SyncButton"
+                android:textSize="22dp" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton2"
+                android:layout_width="308dp"
+                android:layout_height="73dp"
+                android:layout_weight="46.53"
+                android:layout_x="1050dp"
+                android:layout_y="578dp"
+                android:text="ToggleButton"
+                android:textOff="wifi off"
+                android:textOn="wifi on"
+                android:textSize="22dp" />
+        </AbsoluteLayout>
+
+        <AbsoluteLayout
+            android:id="@+id/tabPage1"
+            android:layout_width="match_parent"
+            android:layout_height="654dp"
+            android:layout_gravity="bottom"
+            android:background="@color/gray" >
+
+            <AbsoluteLayout
+                android:id="@+id/AbsoluteLayout1"
+                android:layout_width="1416dp"
+                android:layout_height="546dp"
+                android:layout_x="10dp"
+                android:layout_y="16dp"
+                android:background="@drawable/customshape1" >
+
+                <Spinner
+                    android:id="@+id/SpinEquip"
+                    android:layout_width="340dp"
+                    android:layout_height="80dp"
+                    android:layout_x="1020dp"
+                    android:layout_y="130dp" />
+
+                <Spinner
+                    android:id="@+id/SpinPart"
+                    android:layout_width="340dp"
+                    android:layout_height="80dp"
+                    android:layout_x="520dp"
+                    android:layout_y="130dp" />
+
+                <EditText
+                    android:id="@+id/editTextDescr"
+                    android:layout_width="392dp"
+                    android:layout_height="233dp"
+                    android:layout_x="490dp"
+                    android:layout_y="277dp"
+                    android:inputType="textMultiLine" >
+
+                    <requestFocus />
+                </EditText>
+
+                <Spinner
+                    android:id="@+id/SpinCause"
+                    android:layout_width="340dp"
+                    android:layout_height="80dp"
+                    android:layout_x="1020dp"
+                    android:layout_y="280dp" />
+
+                <TextView
+                    android:id="@+id/TextViewEquip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="1110dp"
+                    android:layout_y="90dp"
+                    android:text="@string/AddEquip"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout01"
+                    android:layout_width="2dp"
+                    android:layout_height="430dp"
+                    android:layout_x="460dp"
+                    android:layout_y="90dp"
+                    android:background="@color/SeparatorGrey"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/TextViewSpinnerTip0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="900dp"
+                    android:layout_y="225dp"
+                    android:text="@string/SpinnerTip0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/TextViewSpinnerTip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="935dp"
+                    android:layout_y="272dp"
+                    android:text="@string/SpinnerTip1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/Red"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/TextViewSpinnerTip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="800dp"
+                    android:layout_y="272dp"
+                    android:text="@string/SpinnerTip"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutZeh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="405dp"
+                    android:layout_y="15dp" >
+
+                    <TextView
+                        android:id="@+id/TextViewZeh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/RegZeh"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/TextViewZehValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ReportValue"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/DeepBlue"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="60dp"
+                    android:layout_y="15dp" >
+
+                    <TextView
+                        android:id="@+id/TextViewDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/RegDate"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/TextViewDateValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ReportValue"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/DeepBlue"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutSector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="745dp"
+                    android:layout_y="15dp" >
+
+                    <TextView
+                        android:id="@+id/TextViewSector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/RegSect"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/TextViewSectorValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ReportValue"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/DeepBlue"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutSmena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="1105dp"
+                    android:layout_y="15dp" >
+
+                    <TextView
+                        android:id="@+id/TextViewSmena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/RegSmena"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/TextViewSmenaValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ReportValue"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/DeepBlue"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="1370dp"
+                    android:layout_height="2dp"
+                    android:layout_x="21dp"
+                    android:layout_y="65dp"
+                    android:background="@color/SeparatorGrey" >
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/SpinPosit"
+                    android:layout_width="340dp"
+                    android:layout_height="80dp"
+                    android:layout_x="55dp"
+                    android:layout_y="275dp" />
+
+                <Spinner
+                    android:id="@+id/SpinAggr"
+                    android:layout_width="340dp"
+                    android:layout_height="80dp"
+                    android:layout_x="55dp"
+                    android:layout_y="130dp" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="955dp"
+                    android:layout_y="250dp" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/TextViewAggr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="80dp"
+                    android:layout_y="90dp"
+                    android:text="@string/RegAggr"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/TextViewPosit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="175dp"
+                    android:layout_y="238dp"
+                    android:text="@string/RegPosit"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/TextViewPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="590dp"
+                    android:layout_y="90dp"
+                    android:text="@string/AddPart"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/TextViewCause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="1140dp"
+                    android:layout_y="241dp"
+                    android:text="@string/AddCause"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/TextViewChosenAggr"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="240dp"
+                    android:layout_y="380dp"
+                    android:text="@string/ReportValue"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/TextViewChosenAggrValue"
+                    android:layout_width="254dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="140dp"
+                    android:layout_y="415dp"
+                    android:text="@string/ReportValue"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/DarkGray2"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/TextViewDescr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="630dp"
+                    android:layout_y="240dp"
+                    android:text="@string/AddDescr"
+                    android:textSize="22sp" />
+
+                <Spinner
+                    android:id="@+id/SpinObj"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_x="20dp"
+                    android:layout_y="446dp" />
+
+                <TextView
+                    android:id="@+id/TextViewObj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="25dp"
+                    android:layout_y="422dp"
+                    android:text="@string/RegObj"
+                    android:textSize="18dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="111dp"
+                    android:layout_height="109dp"
+                    android:layout_x="1060dp"
+                    android:layout_y="400dp"
+                    android:background="@drawable/customshape3"
+                    android:src="@drawable/imagebutton_camera" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="1220dp"
+                    android:layout_y="390dp"
+                    android:orientation="vertical" >
+
+                    <AbsoluteLayout
+                        android:id="@+id/AbsoluteLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="21dp"
+                            android:layout_y="-1dp"
+                            android:text="@string/NumPhoto"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/DeepBlue"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_x="40dp"
+                            android:layout_y="4dp"
+                            android:text="@string/FromFive"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="22dp" />
+                    </AbsoluteLayout>
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="84dp"
+                        android:layout_height="82dp"
+                        android:background="@drawable/customshape3"
+                        android:src="@drawable/imagebutton_photo" />
+                </LinearLayout>
+            </AbsoluteLayout>
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="308dp"
+                android:layout_height="73dp"
+                android:layout_weight="46.53"
+                android:layout_x="1050dp"
+                android:layout_y="578dp"
+                android:text="ToggleButton"
+                android:textOff="wifi off"
+                android:textOn="wifi on"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/SaveButton"
+                android:layout_width="308dp"
+                android:layout_height="73dp"
+                android:layout_weight="46.53"
+                android:layout_x="74dp"
+                android:layout_y="576dp"
+                android:text="@string/SaveButton"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/SyncButton"
+                android:layout_width="308dp"
+                android:layout_height="73dp"
+                android:layout_weight="46.53"
+                android:layout_x="565dp"
+                android:layout_y="576dp"
+                android:text="@string/SyncButton"
+                android:textSize="22dp" />
+        </AbsoluteLayout>
+
+    </FrameLayout>
+
+</TabHost>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uralchem.kckk.uit"
+    android:versionCode="8"
+    android:versionName="130213_0.011" >
+	
+   <uses-sdk android:minSdkVersion="15" />
+    
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  	<uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+  	<uses-permission android:name="android.permission.DELETE_PACKAGES" />
+  	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  	<uses-permission android:name="android.permission.CAMERA" />
+  	<uses-permission android:name="android.permission.INTERNET"/>
+  	<uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />  	
+  	
+    <application
+        android:icon="@drawable/regdef_icon"
+        android:label="@string/app_name" 
+        android:theme="@android:style/Theme.Light"
+        android:drawable="@color/gray"
+        >
+        <activity
+            android:label="@string/app_name"
+            android:name=".FirstDBActivity" 
+            android:screenOrientation="landscape">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".CameraActivity"
+			android:label="@string/app_name"
+			android:screenOrientation="landscape">
+		</activity>
+       
+		<receiver android:name=".WiFiStatusReceiver" android:enabled="true" android:exported="false">
+			<intent-filter>
+				<action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE"/>				
+			</intent-filter>
+		<!--  -->	
+		</receiver>
+    </application>
+
+</manifest>

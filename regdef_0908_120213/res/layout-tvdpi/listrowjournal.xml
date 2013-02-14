@@ -1,0 +1,43 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:focusable="false"
+    >
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rowTextView"
+        android:layout_width="698dp"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:focusable="false"/>
+
+    <ImageButton
+        android:id="@+id/rowImageButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_x="719dp"
+        android:layout_y="11dp"
+        android:background="@drawable/imagebutton_photo"
+        android:gravity="center_vertical"
+        android:focusable="false"
+        />
+        <!-- android:focusable="false" --> 
+    
+        <!-- android:focusable="true"
+        android:clickable="true"  -->
+
+    <CheckBox
+        android:id="@+id/rowCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="782dp"
+        android:layout_y="8dp"
+        android:gravity="center_vertical"
+        android:focusable="false" />
+
+</AbsoluteLayout>
