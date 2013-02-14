@@ -1,2 +1,0 @@
-Version Code = 1; 
-Version name = 0.001_040612_a
