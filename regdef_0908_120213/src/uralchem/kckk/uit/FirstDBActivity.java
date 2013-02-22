@@ -172,9 +172,9 @@ public class FirstDBActivity extends Activity
         // variable
         String optionServer = editTextOptionServer.getText().toString();  
         // tab host
+        // tab 1
         TabHost.TabSpec spec=tabs.newTabSpec("tag1");
         spec.setContent(R.id.tabPage1);  
-        // tab 1
         TextView tab1 = null;       
         tab1 = new TextView(this);
         tab1.setText("Регистрация дефектов");
@@ -1751,8 +1751,8 @@ public class FirstDBActivity extends Activity
         for(int i=0; i<tab_widget.getChildCount(); i++)
             tab_widget.getChildAt(i).setBackgroundResource(R.drawable.tab_bg_selector);
         // Высота панели вкладок
-        	tab_widget.getChildAt(0).getLayoutParams().height =62;
-        	tab_widget.setDividerDrawable(R.drawable.divider);
+        //	tab_widget.getChildAt(0).getLayoutParams().height =62;
+        //	tab_widget.setDividerDrawable(R.drawable.divider);
     }   
     
    
@@ -2293,7 +2293,7 @@ public class FirstDBActivity extends Activity
 		else 
 			{	
 				ArrayList arrayList = new ArrayList();
-				arrayList.add("                                                                              ничего");
+				arrayList.add("                                                                 ничего");
 				listViewJour.setChoiceMode(ListView.CHOICE_MODE_NONE);	
 				// Создаем адаптер
 				ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(context, layout.simple_list_item_1, arrayList);						   		    								
@@ -3640,7 +3640,7 @@ public class FirstDBActivity extends Activity
 									            												int dialogId = DialogFactory.DIALOG_PROGRESS_4;
 									                                   	     					dismissDialog(dialogId);
 									                                   	     					Toast toast = Toast.makeText(context, " У вас установлена самая свежая версия программы ", Toast.LENGTH_LONG);
-									                                   	     					toast.setGravity(Gravity.CENTER, 0, 0); 
+									                                   	     					//toast.setGravity(Gravity.CENTER, 0, 0); 
 									                                   	     					toast.show();
 									            											}
 									            										});
@@ -3655,7 +3655,7 @@ public class FirstDBActivity extends Activity
 							            												int dialogId = DialogFactory.DIALOG_PROGRESS_4;
 							                                   	     					dismissDialog(dialogId);
 							                                   	     					Toast toast = Toast.makeText(context, " В ходе обновления программы произошла ошибка ", Toast.LENGTH_LONG);
-							                                   	     					toast.setGravity(Gravity.CENTER, 0, 0);
+							                                   	     					//toast.setGravity(Gravity.CENTER, 0, 0);
 							                                   	     					toast.show();
 							            											}
 							            										});

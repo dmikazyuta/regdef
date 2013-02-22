@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="uralchem.kckk.uit"
-    android:versionCode="8"
-    android:versionName="130213_0.011" >
+    android:versionCode="9"
+    android:versionName="180213_0.012" >
 	
    <uses-sdk android:minSdkVersion="15" />
     
