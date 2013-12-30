@@ -114,8 +114,7 @@ public class FirstDBActivity extends Activity
         setContentView(R.layout.main);  
         
         //** Form Widgets       
-        // Buttons     
-        
+        // Buttons             
         final Button saveButton = (Button)findViewById(R.id.SaveButton);
         final Button syncButton = (Button)findViewById(R.id.SyncButton);
         final ToggleButton tglButton1 = (ToggleButton)findViewById(R.id.toggleButton1);
@@ -145,7 +144,7 @@ public class FirstDBActivity extends Activity
         final TextView textViewChosenAggr = (TextView) findViewById(R.id.TextViewChosenAggr);
         final TextView textViewChosenAggrValue = (TextView) findViewById(R.id.TextViewChosenAggrValue);
         // Checkbox
-      //  final CheckBox rowCheckBox = (CheckBox)findViewById(R.id.rowCheckBox);
+        // final CheckBox rowCheckBox = (CheckBox)findViewById(R.id.rowCheckBox);
         // ListView
         ListView outputList = (ListView) findViewById(R.id.listViewMenu); 
         final ListView listViewMenu = (ListView) findViewById(R.id.listViewMenu);        
@@ -352,11 +351,7 @@ public class FirstDBActivity extends Activity
     				}
 				});
        	        
-       	        // Для получения результата от активити камеры
-       	        
-       	        
-
-   	        				   }  }).start();
+   	        			}  }).start();
    		
         // Listeners        
         tglButton1.setOnClickListener(mAddListener);

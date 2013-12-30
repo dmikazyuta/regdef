@@ -48,17 +48,7 @@ public class JournalAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
-   /* 
-    public void setCheck(int position, ListView listView)
-    {
-    	View vi = listView;
-    	Log.d("setCheck", Integer.toString(position));
-    	  	               
-    	CheckBox check = (CheckBox)vi.findViewById(R.id.rowCheckBox);
-    	if (check.isChecked()) check.setChecked(false);
-    		else check.setChecked(true);
-    }
-     */   
+  
     public View getView(final int position, View convertView, ViewGroup parent) {
 
     	View vi = convertView;

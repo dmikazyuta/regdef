@@ -59,17 +59,6 @@ public class MediaScanner implements MediaScannerConnectionClient {
 	
 	public void onScanCompleted(String path, final Uri uri) 
 	{
-		
-			/*
-			Log.d("onScanCompleted",uri + "success"+conn);
-			if (uri != null) 
-			{
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.setData(uri);							
-				((FirstDBActivity)context).startActivityForResult(intent, FirstDBActivity.GALLERY);
-				//FirstDBActivity.this.startActivity(intent);
-			}
-			*/
 			Log.d("onScanCompleted", "file://"+uri.getPath() + "success"+conn);
 			
 			myHandler.post(new Runnable() { 
@@ -85,10 +74,7 @@ public class MediaScanner implements MediaScannerConnectionClient {
 		 					Thread.currentThread().isInterrupted();
 		 				}  	
 				}
-			});
-            		 				
-  	            	 	      
-			//((FirstDBActivity)context).startGallery(uri);		
+			});	
 	}
 	
 }

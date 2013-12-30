@@ -15,13 +15,9 @@ public class DBAdapter
 {
 	int id = 0;  
     public static final String KEY_ROWID = "_id";  
-    //public static final String KEY_QUOTES = "NAME";  
-    private static final String TAG = "DBAdapter";  
-  
-    public static final String DATABASE_NAME = "TechWatch";  
-   // private static final String DATABASE_TABLE = "obj";  
-    private static final int DATABASE_VERSION = 1; 
-    
+    private static final String TAG = "DBAdapter";    
+    public static final String DATABASE_NAME = "TechWatch";   
+    private static final int DATABASE_VERSION = 1;     
     private ArrayList<String> arrayKeys = null;
     private ArrayList<String> arrayValues = null;
     private ArrayList<String> databaseKeys = null;
@@ -30,18 +26,15 @@ public class DBAdapter
     // Таблицы
     private static final String create_table_sector =  
             "create table sector (_id integer primary key autoincrement, "  
-            					+ "NAME text)"; 
-    
+            					+ "NAME text)";     
     private static final String create_table_aggr =  
             "create table aggr (_id integer primary key autoincrement, "  
             				 + "NAME text, " 
-            				 + "SECTOR_ID integer)";
-    
+            				 + "SECTOR_ID integer)";    
     private static final String create_table_obj =  
             "create table obj (_id integer primary key autoincrement, "  
             				 + "NAME text, " 
-            				 + "AGGR_ID integer)";
-    
+            				 + "AGGR_ID integer)";    
     private static final String create_table_defects =  
             "create table defects (_id integer primary key autoincrement, "  	 // id
             				 + "REG_DATE datetime not null, " 			 // Дата регистрации            				 
@@ -57,8 +50,7 @@ public class DBAdapter
             				 + "STOP boolean not null,"			 // Остановка
             				 + "DESCR text,"					 // Описание
             				 + "SEND boolean not null,"			 // Флаг отправки в центральную базу
-            				 + "IMAGE_EXIST boolean not null)";	 // Флаг наличия фотографий для данного дефекта		 		 
-    
+            				 + "IMAGE_EXIST boolean not null)";	 // Флаг наличия фотографий для данного дефекта		 		     
     private static final String create_table_images =  
             "create table images (_id integer primary key autoincrement, "  
             				 + "NAME text, " 
@@ -74,8 +66,6 @@ public class DBAdapter
     "select 'password' as NAME, '' as PARAM union " +
     "select 'ZEH' as NAME, '' as PARAM union " +
     "select 'SECTOR' as NAME, '' as PARAM union " +
- //   "select 'VERSION' as NAME, '0' as PARAM union " +
- //   "select 'VERSIONNAME' as NAME, '' as PARAM union " +
     "select 'LASTUPDATE' as NAME, '' as PARAM ";
     
     // Цех и Участок
@@ -320,7 +310,7 @@ public class DBAdapter
 	}
        return value;	
     }
- // Запрос из таблицы ZehSector для вывода Цеха
+    // Запрос из таблицы ZehSector для вывода Цеха
     public Cursor getSectorByZeh(String zeh)  
     {  
     	Cursor cursor;
@@ -508,46 +498,6 @@ public class DBAdapter
     	db.execSQL("insert into d_cause values("+_id+", "+parent+", "+level+", '"+name+"', "+is_leaf+")");
     }
     
-    /*    
-    public void setFullDadabase()
-    {
-    	//insert into sector table
-    	db.execSQL("insert into sector(NAME) values ('1')");
-    	db.execSQL("insert into sector(NAME) values ('2')");
-    	db.execSQL("insert into sector(NAME) values ('3')");
-    	db.execSQL("insert into sector(NAME) values ('4')");
-    	//insert into aggr table
-    	db.execSQL("insert into aggr(NAME, SECTOR_ID) values ('агр1_1',1)");
-    	db.execSQL("insert into aggr(NAME, SECTOR_ID) values ('агр1_2',1)");
-    	db.execSQL("insert into aggr(NAME, SECTOR_ID) values ('агр1_3',1)");
-    	db.execSQL("insert into aggr(NAME, SECTOR_ID) values ('агр2_1',2)");
-    	db.execSQL("insert into aggr(NAME, SECTOR_ID) values ('агр2_2',2)");
-    	db.execSQL("insert into aggr(NAME, SECTOR_ID) values ('агр3_1',3)");
-    	//insert into obj table
-    	db.execSQL("insert into obj(_id, NAME, AGGR_ID) values (0,' ',0);");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_1_А',1)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_1_B',1)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_1_C',1)");
-    	
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_2_А',2)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_2_B',2)");
-    	
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_3_A',3)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_3_B',3)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект1_3_C',3)");
-    	
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект2_1_A',4)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект2_1_B',4)");
-    	
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект2_2_A',5)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект2_2_B',5)");
-    	
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект3_1_A',6)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект3_1_B',6)");
-    	db.execSQL("insert into obj(NAME, AGGR_ID) values ('объект3_1_C',6)");
-    }
-    */
-    
     //* Выставление предустановленных параметров
     // Цех на главной панели
     public String getCurrentZehName()  
@@ -616,49 +566,7 @@ public class DBAdapter
     	}
        return val;	
     }
-    
-    //* Параметры версии программы
-    // Версия
-    /*
-    public String getVersion()  
-    {               
-    		Cursor cursor = db.rawQuery("SELECT PARAM FROM options where NAME = 'VERSION'", null); 
-    if (cursor != null) 
-    	{
-    		if(cursor.moveToFirst()) {  
-                return cursor.getString(0);  
-            }
-    	}
-       return "нет данных";	
-    }
-    
-    // Обновляем
-    public void updateVersion(String version)  
-    {
-    //	db.execSQL("update options set PARAM = '"+zeh+"' where NAME = 'ZEH'");
-    	db.execSQL("update OPTIONS set PARAM = '"+version+"' where NAME = 'VERSION'");
-    }
-    
-    // Название Версия
-    public String getVersionName()  
-    {               
-    		Cursor cursor = db.rawQuery("select PARAM from OPTIONS where NAME = 'VERSIONNAME'", null); 
-    if (cursor != null) 
-    	{
-    		if(cursor.moveToFirst()) {  
-                return cursor.getString(0);  
-            }
-    	}
-       return "нет данных";	
-    }
-    
-    // Обновляем
-    public void updateVersionName(String versionname)  
-    {
-    	db.execSQL("update OPTIONS set PARAM = '"+versionname+"' where NAME = 'VERSIONNAME'");
-    }
-    */
-   
+
     // Дата последнего обновления
     public String getLastUpdate()  
     {               
@@ -707,18 +615,13 @@ public class DBAdapter
     									") a where a.rownum <= (select count(*) from defects where send = 1) - "+rownum+" )");
     }
     
-    
-    
-// SpinAggr
-    
+
     // spinAggr by spinSector
-    
     public Integer getSpinAggrId(int i)  
     {  
     Integer j = null ;
     
     Cursor cursor = db.rawQuery(      				
-			//	 "SELECT CAST(_ID as text)||' '||NAME as INFO FROM sector where _id="+i, null); 
 				"SELECT _id FROM aggr where sector_id = "+i+" LIMIT 1", null); 
 		if (cursor != null) 
 		{
@@ -751,10 +654,8 @@ public class DBAdapter
     
     public String getSpinAggrValues(int j)  
     {  
-      // String wrong_result = BuildWord.charAt('0');
        String val = null;       
     		Cursor cursor = db.rawQuery(      				
-    			//	 "SELECT CAST(_ID as text)||' '||NAME as INFO FROM sector where _id="+i, null); 
     				"SELECT NAME FROM aggr where _id = "+j, null); 
     		if (cursor != null) 
     		{
@@ -768,10 +669,8 @@ public class DBAdapter
     
     public String getSpinObjValues(int j)  
     {  
-      // String wrong_result = BuildWord.charAt('0');
        String val = null;       
     		Cursor cursor = db.rawQuery(      				
-    			//	 "SELECT CAST(_ID as text)||' '||NAME as INFO FROM sector where _id="+i, null); 
     				"SELECT NAME FROM obj where _id = "+j, null); 
     		if (cursor != null) 
     		{
@@ -823,8 +722,7 @@ public class DBAdapter
 		
     }
     
-//	spinObj   
-    
+//	spinObj     
     public long getObjCount(int i)  
     {  
     	Long j = null;
@@ -948,8 +846,8 @@ public class DBAdapter
         return val;	
     	
     }
-// SaveButton
     
+    // SaveButton   
     public void SaveReg(String regdate, String zeh, String sector, String smena, String aggr, String posit, String obj, String part, String equip, String cause, String descr, String image_exist)  
     {
     	try {
@@ -964,29 +862,25 @@ public class DBAdapter
     		}
     }
 
-// После сохранения дефекта изменим статус
-    
+    // После сохранения дефекта изменим статус  
     public void AfterSaveDefects(String defect)  
     {
     	db.execSQL("update defects set send = 1 where _id = "+defect+"");
     }    
     
-// Удалим старые записи из таблицы дефектов
-    
+    // Удалим старые записи из таблицы дефектов    
     public void DeleteOldDefects(String date)  
     {
     	db.execSQL("delete from defects where send = 1 and REG_DATE >= '"+date+"' + 7");
     }  
     
-// Удалим старые записи из таблицы дефектов
-    
+    // Удалим старые записи из таблицы дефектов    
     public void deleteImages(String _id)  
     {
     	db.execSQL("delete from images where _id = "+_id);
     }  
     
-// Сохраняем запись о фотографии
-    
+    // Сохраняем запись о фотографии    
     public void SaveImageString(String name, String date, String status, String def_id)  
     {
     	try {    	
@@ -1008,11 +902,8 @@ public class DBAdapter
     	db.execSQL("update images set STATUS='"+newstatus+"' where STATUS = 'temp'");
     }
     
-// Правим статус фотографии    
-    
-    
-// get Defects for Http
-
+    // Правим статус фотографии       
+    // get Defects for Http
     public Cursor getDefects(int sendstatus)  
     {  
     Cursor cursor = null;
@@ -1136,8 +1027,7 @@ public class DBAdapter
 		return result;		
     }       
 
- // get Zeh list from table Zehsector
-    
+    // get Zeh list from table Zehsector
     public Cursor getZeh()  
     {  
 	Cursor cursor = db.rawQuery("select Substr([REG_DATE], 7, 4)||'-'||Substr([REG_DATE], 4, 2)||'-'||Substr([REG_DATE], 1, 2)||'-'||Substr([REG_DATE], 12, 5)||':00' as reg_date, " +

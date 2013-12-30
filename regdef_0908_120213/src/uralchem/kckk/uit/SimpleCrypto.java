@@ -10,12 +10,6 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * Usage:
- * <pre>
- * String crypto = SimpleCrypto.encrypt(masterpassword, cleartext)
- * ...
- * String cleartext = SimpleCrypto.decrypt(masterpassword, crypto)
- * </pre>
  * @author ferenc.hechler
  */
 public class SimpleCrypto {
@@ -42,7 +36,6 @@ public class SimpleCrypto {
 	    byte[] raw = skey.getEncoded();
 	    return raw;
 	}
-
 	
 	private static byte[] encrypt(byte[] raw, byte[] clear) throws Exception {
 	    SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");

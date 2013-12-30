@@ -182,7 +182,6 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback
 	    }	 
 	
 	// Поведение камеры в разных состояниях    
- 	
     public void surfaceChanged(SurfaceHolder holder, int format, int width,
 			int height) {
    	 
@@ -206,20 +205,17 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback
 	}
 
 	public void surfaceCreated(SurfaceHolder holder) {
-		// TODO Auto-generated method stub
 		camera = Camera.open();
 	}
 
 	public void surfaceDestroyed(SurfaceHolder holder) {
-		// TODO Auto-generated method stub
 		camera.stopPreview();
 		camera.release();
 		camera = null;
 		previewing = false;
 	}
     
-	// Листенер кнопок UI
-	
+	// Листенер кнопок UI	
      private OnClickListener buttonListener = new OnClickListener()  
      { 
  		public void onClick(View v)  
@@ -350,17 +346,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback
         }
      };
      
-     // Автофокус
-     /*
-     AutoFocusCallback myAutoFocusCallback = new AutoFocusCallback(){
-
-    	  public void onAutoFocus(boolean arg0, Camera arg1) {
-
-    	  }};
-    */
-     
-  	// Делаем фотографию
-  	
+  	// Делаем фотографию  	
      ShutterCallback myShutterCallback = new ShutterCallback(){
 
  		public void onShutter() {

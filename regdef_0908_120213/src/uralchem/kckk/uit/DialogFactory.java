@@ -14,9 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * Утилитарный класс с фабричным методом
- * для создания диалогов по коду
- *
  * @author dmitrykunin
  *
  */
@@ -30,14 +27,6 @@ public class DialogFactory {
 	public final static int DIALOG_PROGRESS_2 = 3;
 	public final static int DIALOG_PROGRESS_3 = 4;
 	public final static int DIALOG_PROGRESS_4 = 5;
-	/**
-	 * Фабричный метод возращающий
-	 * диалог по его коду
-	 *
-	 * @param id код диалога
-	 * @param context
-	 * @return диалог, соответсвующий коду
-	 */
 	
 	public static Dialog getDialogById(int id, String txt, final Context context, DialogInterface.OnClickListener onClickListener) 
 	{
@@ -109,10 +98,7 @@ public class DialogFactory {
 	{
          ProgressDialog dialog = new ProgressDialog(context);
          dialog.setCancelable(true);
-       //  dialog.setMessage("1..");
-         
-         return dialog;
-         
+         return dialog;         
 	}
 	
 
